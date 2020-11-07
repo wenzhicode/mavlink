@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<mavlink>
+  <version>3</version>
+  <messages>
+    <message id="0" name="reboot">
+      <description>Reboot to flash firmware</description>
+      <field type="uint8_t" name="flashfirmware">flashfirmware</field>
+    </message>
+	<message id="1" name="calibrate">
+      <description>acc and gyro calibration</description>
+	  <field type="uint8_t" name="calibrate">calibration</field>
+    </message>	
+  </messages>
+</mavlink>

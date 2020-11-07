@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<mavlink>
+  <version>3</version>
+  <messages>
+    <message id="0" name="reboot">
+      <description>Reboot to flash firmware</description>
+      <field type="uint8_t" name="reset">double</field>
+	  <field type="uint8_t" name="msp">double</field>
+    </message>
+	<message id="1" name="calibrate">
+      <description>acc and gyro calibration</description>
+	  <field type="uint8_t" name="calibrate">calibration</field>
+    </message>	
+	<message id="2" name="tx">
+      <description>TX value</description>
+      <field type="int16_t" name="roll">roll</field>
+	  <field type="int16_t" name="pitch">pitch</field>
+	  <field type="int16_t" name="yaw">yaw</field>
+	  <field type="uint16_t" name="throttle">throttle</field>
+	  <field type="uint16_t" name="aux1">aux1</field>
+	  <field type="uint16_t" name="aux2">aux2</field>
+	  <field type="uint16_t" name="aux3">aux3</field>
+	  <field type="uint16_t" name="aux4">aux4</field>
+	  <field type="int8_t" name="anglex">anglex</field>
+	  <field type="int8_t" name="angley">anglex</field>
+	  <field type="int8_t" name="anglez">anglex</field>
+    </message>
+	<message id="3" name="motor_value">
+      <description>motor value</description>
+      <field type="uint16_t" name="motor1">motor1</field>
+	  <field type="uint16_t" name="motor2">motor2</field>
+	  <field type="uint16_t" name="motor3">motor3</field>
+	  <field type="uint16_t" name="motor4">motor4</field>
+    </message>
+	<message id="4" name="motor_io">
+      <description>motor io</description>
+	  <field type="uint8_t" name="motor_dir">motor_dir</field>
+      <field type="uint8_t" name="motor_min">motor_min</field>
+	  <field type="uint8_t" name="motor_dshot">motor_dshot</field>
+	  <field type="uint8_t" name="mtest">motor test</field>
+	  <field type="uint8_t" name="motor4">motor4</field>
+    </message>
+	<message id="5" name="attitude">
+      <description>acc and gyro values</description>
+      <field type="int16_t" name="accroll">accroll</field>
+	  <field type="int16_t" name="accpitch">accpitch</field>
+	  <field type="int16_t" name="accyaw">accyaw</field>
+	  <field type="int16_t" name="gyroroll">gyroroll</field>
+	  <field type="int16_t" name="gyropitch">gyropitch</field>
+	  <field type="int16_t" name="gyroyaw">gyroyaw</field>
+    </message>
+	<message id="6" name="pid">
+      <description>pids</description>
+	  <field type="float" name="roll_kp">roll_kp</field>
+	  <field type="float" name="roll_ki">roll_ki</field>
+	  <field type="float" name="roll_kd">roll_kd</field>
+	  <field type="float" name="pitch_kp">pitch_kp</field>
+	  <field type="float" name="pitch_ki">pitch_ki</field>
+	  <field type="float" name="pitch_kd">pitch_kd</field>
+	  <field type="float" name="yaw_kp">yaw_kp</field>
+	  <field type="float" name="yaw_ki">yaw_ki</field>
+	  <field type="float" name="yaw_kd">yaw_kd</field>	  
+    </message>
+	<message id="7" name="rx">
+      <description>rx</description>
+	  <field type="uint8_t" name="rx_select">rx_select</field>
+    </message>
+	<message id="8" name="rates">
+      <description>rates</description>
+	  <field type="uint8_t" name="rspb">reset save PB</field>
+	  <field type="uint8_t" name="rrc">roll_rate</field>
+	  <field type="uint8_t" name="rr">roll_rc_rate</field>
+	  <field type="uint8_t" name="re">roll_rc_curve</field>
+	  <field type="uint8_t" name="prc">pitch_rate</field>
+	  <field type="uint8_t" name="pr">pitch_rc_rate</field>
+	  <field type="uint8_t" name="pe">pitch_rc_curve</field>
+	  <field type="uint8_t" name="yrc">yaw_rate</field>
+	  <field type="uint8_t" name="yr">yaw_rc_rate</field>
+	  <field type="uint8_t" name="ye">yaw_rc_curve</field>		  
+    </message>
+	<message id="9" name="config_tab">
+      <description>config_tab</description>
+	  <field type="uint8_t" name="tab_index">tab_index</field>
+	  <field type="uint8_t" name="sub_index">sub_index</field>
+    </message>
+	<message id="10" name="reset">
+      <description>reset</description>
+	  <field type="uint8_t" name="reset">reset</field>
+    </message>
+	<message id="11" name="save">
+      <description>save</description>
+	  <field type="uint8_t" name="save">save</field>
+    </message>
+	<message id="12" name="modes">
+      <description>modes</description>
+	  <field type="uint8_t" name="acron">acron</field>
+	  <field type="uint8_t" name="acros">acros</field>
+	  <field type="uint8_t" name="leveln">leveln</field>
+	  <field type="uint8_t" name="levels">levels</field>
+	  <field type="uint8_t" name="horn">horn</field>
+	  <field type="uint8_t" name="hors">hors</field>
+	  <field type="uint8_t" name="racean">racean</field>
+	  <field type="uint8_t" name="raceas">raceas</field>
+	  <field type="uint8_t" name="racehn">racehn</field>
+	  <field type="uint8_t" name="racehs">racehs</field>
+	  <field type="uint8_t" name="turtlen">turtlen</field>
+	  <field type="uint8_t" name="turtles">turtles</field>
+    </message>
+	<message id="13" name="other">
+      <description>other</description>
+	  <field type="uint8_t" name="max_angle">max_angle</field>
+	  <field type="float" name="low_vol">low_vol</field>
+    </message>
+	<message id="14" name="status_build">
+      <description>build time</description>
+	  <field type="uint8_t" name="tar">tar</field>
+	  <field type="uint8_t" name="ver">version</field>
+	  <field type="uint16_t" name="year">year</field>
+	  <field type="uint8_t" name="month">month</field>
+	  <field type="uint8_t" name="day">day</field>
+	  <field type="uint8_t" name="hour">hour</field>
+	  <field type="uint8_t" name="min">min</field>
+	  <field type="uint8_t" name="sec">sec</field>
+	  <field type="uint8_t" name="cpu_load">cpu load</field>
+	  <field type="float" name="vol">vol</field>
+	  <field type="uint8_t" name="rx">rx</field>
+	  <field type="uint8_t" name="sensors">sensors</field>
+    </message>
+  </messages>
+</mavlink>
